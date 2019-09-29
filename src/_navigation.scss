@@ -1,0 +1,104 @@
+nav {
+    
+    @include width-height(540px,190px);
+    @include float-clear(left);
+    text-align:right;
+    
+    @include break(959px){
+        @include width-height(inherit,50px);
+        float:none;text-align:center;
+    }
+
+    @include break($small){
+        margin-bottom:40px !important;
+    }
+
+    ul {
+        list-style-type:none;
+        margin-top:95px;
+
+        
+        @include break($large){
+            margin-top:0;
+        }
+
+        li {
+            display:inline;
+            font-size:0.8em;
+            margin-right:10px;
+
+            @include break($large){
+                font-size:1em;margin:0 10px;
+            }
+
+            @include break($medium){
+                font-size:0.8em;margin:0 5px;
+            }
+        }
+
+        a {
+            color:$lightRed;
+            text-decoration:none;
+            letter-spacing:-0.01em;   
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+}
+
+.greybar{
+    @include width-height(100%,90px);
+    background:$greyBar;clear:both;padding-top:30px;
+    @include break($small){
+        display:none;
+    }
+}
+
+footer{
+    @include width-height(100%,120px);
+    @include margin-padding(null,50px 0 0 0);
+    background:$darkGrey;text-align:center;color:$white;
+    
+    @include break($small){
+        text-align:center;
+    }
+
+    p{
+        @include break ($small){
+            float:none;margin:0;
+        }
+    }
+
+    img{
+        @include break ($small){
+            float:none;margin:0;
+        }
+
+    }
+    .social-media{
+        margin:0 auto;width:165px;
+        
+        div{
+            float:left;margin-right:5px;
+
+            /*Mathemcatical Expression and @for usage*/
+            @for $item from 1 to length($socialMediaBg)+1{
+                &.#{nth($socialMediaBg,$item)}{
+                    background: $socialMediaImage ($item - 1)*-38px 0px; 
+                }
+            }
+    
+            a{
+                @include width-height(36px,36px);
+                display:block;  
+                text-indent:-9999px;
+            }
+            
+            
+        }
+
+        
+    }
+}

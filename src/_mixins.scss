@@ -1,0 +1,27 @@
+@mixin break($args...) {
+    @if length($args) == 1 {
+        @media screen and (max-width: nth($args, 1)) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: nth($args, 1)) and 
+               (max-width: nth($args, 2)) {
+            @content;
+        }
+    }
+}
+
+@mixin width-height($width:null, $height:null) {
+    width: $width;
+    height: $height;
+}
+
+@mixin margin-padding($margin:null, $padding:null) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin float-clear($float:null, $clear:null) {
+    float: $float;
+    clear: $clear;
+}

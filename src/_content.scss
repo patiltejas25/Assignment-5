@@ -1,0 +1,72 @@
+
+#headline{
+   
+    @include width-height(100%,130px);
+    @include margin-padding(0 auto);
+    background:$lightRed;text-align:center;
+    
+    h1{
+        color:$white;font-size:2.5em;font-weight:100;padding-top:50px;
+        @include break($medium){
+            font-size:2em;padding-top:50px;
+        }
+        @include break($small){
+            font-size:1.5em;padding-top:30px;
+        }
+    }
+}
+
+#content{
+
+    @include width-height(940px);
+    @include margin-padding(20px auto);
+
+    @include break(959px){
+        width:inherit;
+    }
+    h3{
+        color:$lightGrey;font-size:2em;font-weight:400; 
+        @include break($small){
+            font-size:1.6em;
+        }
+    }
+
+    #products{
+        width:460px;float:left;
+
+        @include break($large){
+            width:46%;margin:0 2%;
+        }
+
+        @include break($medium){
+            width:96%;margin:0 2%;float:none;
+        }
+
+        img{
+            float:left;margin-right:20px;
+        }
+        article{
+            margin-bottom:40px;
+            img{
+                @include break($small){
+                    display:none;
+                }
+            }
+        }
+        h4{
+            line-height:1em;
+        }
+    }
+
+    #testimonials{
+        width:460px;float:right;
+
+        @include break($large){
+            width:46%;margin:0 2%;
+        }
+
+        @include break($medium){
+            width:96%;margin:0 2%;float:none;
+        }
+    }
+}

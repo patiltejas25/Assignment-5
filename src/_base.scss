@@ -1,0 +1,104 @@
+body {
+    font-family: $roboto, $sansSerif;
+    font-size:1em;
+    line-height:2em;
+    background:$backgroundImage $white repeat-x;margin:0;
+
+    main{
+
+        @include width-height(940px);
+        @include margin-padding(0 auto, 0 10px);
+
+        @include break($large){
+            width:768px;
+        }
+
+        @include break($medium){
+            width:460px;
+        }
+
+        @include break($small){
+            width:300px;
+        }
+
+
+        figure {
+            @include width-height(400px,190px);
+            @include float-clear(left);
+            @include margin-padding(0px);
+            background:$logoImage no-repeat 0 50px;
+            display:block;
+
+            @include break($large){
+                @include width-height(inherit,140px);
+                float:none;background-position:center;
+            }
+
+            @include break($small){
+                background-size:contain;height:100px;
+            }
+
+
+        }
+
+        header {
+
+            @include width-height(inherit);
+            @include float-clear($clear:both);
+            @include margin-padding($padding :40px 0 0 0);
+            text-align:center;
+
+            img{
+                max-width: 100%;
+                height: auto;
+                @include break($medium){
+                    margin-bottom:100px;
+                }
+                @include break($small){
+                    margin-bottom:80px;
+                }
+            }
+
+            h1{
+                color:$darkRed;font-weight:100;font-size:4em;line-height:0;
+
+                @include break($large){
+                    font-size:3em;
+                }
+                @include break($medium){
+                    font-size:2em;
+                }
+
+                &:first-child{
+                    font-size:1.4em;margin-bottom:20px; 
+                }
+            }
+
+            h2{
+                color:$white;font-weight:900;font-size:2.5em;line-height:0;margin-bottom:70px;
+
+                @include break($large){
+                    font-size:1.5em;
+                }
+                @include break($medium){
+                    font-size:1em;
+                }
+                @include break($small){
+                    font-size:1.5em;
+                }
+            }
+
+            h3{
+                color:$lightGrey;font-weight:400;font-size:2em;line-height:0;margin-bottom:50px;
+                @include break($large){
+                    font-size:1.5em;
+                }
+                @include break($small){
+                    color:$white;font-size:1em;
+                }
+            }
+        }
+
+    }
+  }
+
