@@ -173,11 +173,11 @@ footer {
         background: url("../images/social-media.png") -76px 0px; }
       footer .social-media div.four {
         background: url("../images/social-media.png") -114px 0px; }
-      footer .social-media div a {
-        width: 36px;
-        height: 36px;
-        display: block;
-        text-indent: -9999px; }
+    footer .social-media a {
+      width: 36px;
+      height: 36px;
+      display: block;
+      text-indent: -9999px; }
 
 #headline {
   width: 100%;

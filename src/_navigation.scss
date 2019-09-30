@@ -89,14 +89,13 @@ footer{
                     background: $socialMediaImage ($item - 1)*-38px 0px; 
                 }
             }
-    
-            a{
-                @include width-height(36px,36px);
-                display:block;  
-                text-indent:-9999px;
-            }
-            
-            
+      
+        }
+
+        a{
+            @include width-height(36px,36px);
+            display:block;  
+            text-indent:-9999px;
         }
 
         
